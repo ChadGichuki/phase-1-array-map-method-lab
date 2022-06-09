@@ -12,5 +12,13 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  return tutorials.map(string => {
+    return string.split(' ').map(word => {
+      return word[0].toUpperCase() + word.substring(1)
+    }).join(' ')
+  })
 }
+
+// Reference:
+// Solution to split the string at the ' ', map through each word
+// then join the words using ' ' found at: https://stackoverflow.com/a/22193094
